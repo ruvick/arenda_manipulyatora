@@ -47,6 +47,7 @@
 	padding: 43px 22px 37px 34px;
 	background: #FFC200;
 	border-radius: 25px;
+	box-shadow: 0px 10px 13px -11px #000000;
 }
 .sending-form h2 {
 	line-height: 40 / 40 * 100%;
@@ -55,6 +56,18 @@
 .sending-form p {
 	font-size: 12px;
 	line-height: 14.4 / 12 * 100%;
+}
+.sending-form p {
+	font-size: 12px;
+	line-height: 14.4 / 12 * 100%;
+	position: relative;
+	margin-left: 10px;
+	&:before {
+		content: '*';
+		position: absolute;
+		top: 0;
+		left: -8px;
+	}
 }
 .form .input {
 	margin-bottom: 16px;

@@ -891,7 +891,9 @@ body.ie .ibg img {
   flex: 0 0 458px;
   padding: 43px 22px 37px 34px;
   background: #FFC200;
-  border-radius: 25px; }
+  border-radius: 25px;
+  -webkit-box-shadow: 0px 10px 13px -11px #000000;
+  box-shadow: 0px 10px 13px -11px #000000; }
 
 .sending-form h2 {
   line-height: 100%;
@@ -900,6 +902,17 @@ body.ie .ibg img {
 .sending-form p {
   font-size: 12px;
   line-height: 120%; }
+
+.sending-form p {
+  font-size: 12px;
+  line-height: 120%;
+  position: relative;
+  margin-left: 10px; }
+  .sending-form p:before {
+    content: '*';
+    position: absolute;
+    top: 0;
+    left: -8px; }
 
 .form .input {
   margin-bottom: 16px; }
