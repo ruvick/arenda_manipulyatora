@@ -78,7 +78,7 @@ body {
 
 body {
   line-height: 1;
-  font-family: "";
+  font-family: "Lato";
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
@@ -86,7 +86,7 @@ body {
 input,
 button,
 textarea {
-  font-family: ""; }
+  font-family: "Lato"; }
 
 input::-ms-clear {
   display: none; }
@@ -121,13 +121,38 @@ h6 {
   font-size: inherit; }
 
 body {
-  color: #1a1818;
-  font-size: 14px;
+  color: #161615;
+  font-size: 22px;
+  line-height: 39px;
   font-weight: 400; }
   body a {
-    color: #1a1818; }
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    color: #161615; }
   body.lock {
     overflow: hidden; }
+
+h1 {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 110%;
+  color: #0070bf; }
+
+h2 {
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 120%; }
+
+h3 {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 120%; }
+
+h4 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 83.33333%; }
 
 .wrapper {
   width: 100%;
@@ -147,7 +172,7 @@ body {
   flex: 1 1 auto; }
 
 .container {
-  max-width: 1170px;
+  max-width: 1440px;
   margin: 0 auto;
   width: 100%; }
 
