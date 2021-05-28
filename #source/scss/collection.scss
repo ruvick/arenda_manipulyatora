@@ -2,6 +2,7 @@
 .prod-card {
 	// .prod-card__body
 	// margin: 0 -8.5px;
+	margin-bottom: 57px;
 	justify-content: space-between;
 	&__body {
 		flex: 0 1 32%;
@@ -9,6 +10,7 @@
     border: 0.4px solid #c7c9cb;
     border-radius: 25px;
 		background: #F6F8FC;
+		box-shadow: 0px 10px 13px -11px #000000;
     overflow: hidden;
 	}
 	// .prod-card__link

@@ -168,6 +168,63 @@ h4 {
 	margin-bottom: 52px;
 }
 
+.services {
+	&__block {
+		width: 100%;
+		// height: 400px;
+		justify-content: space-between;
+		background: #fff;
+		border-radius: 25px;
+		box-shadow: 0px 10px 23px -10px #000000;
+		overflow: hidden;
+	}
+
+	&__block-text {
+		flex: 1 1 50%;
+    padding: 45px 78px 60px 41px;
+		h2 {
+			text-align: left;
+			margin-left: 40px;
+			margin-bottom: 30px;
+		}
+		ul li {
+			display: flex;
+			// align-items: center;
+			font-size: 24px;
+			line-height: 24 / 24 * 100%;
+    	margin-bottom: 15px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&:before {
+				content: '';
+				float: left;
+				flex: 0 0 12px;
+				height: 12px;
+				margin-top: 3px;
+				background: #0070BF;
+				border-radius: 50%;
+			}
+			p {
+				padding-left: 30px;
+			}
+		}
+	}
+
+	&__block-img {
+		display: flex;
+    justify-content: center;
+		flex: 0 0 50%;
+    // height: 400px;
+    overflow: hidden;
+		img {
+			max-width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
 
 
 
