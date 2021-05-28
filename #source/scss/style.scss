@@ -1,0 +1,220 @@
+//<МИКСИНЫ>===============================================================================================
+@import "mixins.scss";
+//</МИКСИНЫ>===============================================================================================
+
+//<ШРИФТЫ>===============================================================================================
+
+//<Подключаем шрифты>=======================================================================================
+@font-face { 
+	font-family: "Lato";
+	src: url("../fonts/Lato-Light.eot");
+	src: local("☺"), url("../fonts/Lato-Light.woff") format("woff"), url("../fonts/Lato-Light.ttf") format("truetype"),
+	url("../fonts/Lato-Light.svg") format("svg");
+	font-weight: 300;
+	font-style: normal;   
+}
+
+@font-face {
+	font-family: "Lato";
+	src: url("../fonts/Lato-Regular.eot");
+	src: local("☺"), url("../fonts/Lato-Regular.woff") format("woff"), url("../fonts/Lato-Regular.ttf") format("truetype"),
+	url("../fonts/Lato-Regular.svg") format("svg");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Lato";
+	src: url("../fonts/Lato-Medium.eot");
+	src: local("☺"), url("../fonts/Lato-Medium.woff") format("woff"), url("../fonts/Lato-Medium.ttf") format("truetype"),
+	url("../fonts/Lato-Medium.svg") format("svg");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Lato";
+	src: url("../fonts/Lato-Semibold.eot");
+	src: local("☺"), url("../fonts/Lato-Semibold.woff") format("woff"),
+	url("../fonts/Lato-Semibold.ttf") format("truetype"), url("../fonts/Lato-Semibold.svg") format("svg");
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Lato";
+	src: url("fonts/Lato-Bold.eot");
+	src: local("☺"), url("../fonts/Lato-Bold.woff") format("woff"), url("../fonts/Lato-Bold.ttf") format("truetype"),
+	url("../fonts/Lato-Bold.svg") format("svg");
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Lato";
+	src: url("../fonts/Lato-Heavy.eot");
+	src: local("☺"), url("../fonts/Lato-Heavy.woff") format("woff"), url("../fonts/Lato-Heavy.ttf") format("truetype"),
+	url("../fonts/Lato-Heavy.svg") format("svg");
+	font-weight: 900;
+	font-style: normal;
+}
+//</Подключаем шрифты>=======================================================================================
+
+//<Иконочные шрифты>==========================================================================================
+
+//</Иконочные шрифты>==========================================================================================
+
+//<Шрифт по умолчанию>==========================================================================================
+$fontfamily: "";
+//</Шрифт по умолчанию>==========================================================================================
+
+//</ШРИФТЫ>=======================================================================================================
+
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+$minwidth: 320px;
+$mw: 1170;
+$md1: $mw + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;  
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import "null.scss";
+body {
+	color: #1a1818;
+	font-size: 14px;
+	font-weight: 400;
+	a {
+		color: #1a1818;
+	}
+	&.lock {
+		overflow: hidden;
+	} 
+}
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+
+//<ЗАГОЛОВКИ>=================================================================================================================
+// h1 {
+// 	font-size: 35px;
+// 	font-weight: 500;
+// 	line-height: 38px;}
+// h2 {
+// 	font-size: 32px;
+// 	font-weight: 500;
+// 	line-height: 38px;}
+// h3 {
+// 	font-size: 28px;
+// 	font-weight: 500;
+// 	line-height: 38px;}
+// h4 {
+// 	font-size: 25px;
+// 	font-weight: 500;
+// 	line-height: 38px;}
+//<ЗАГОЛОВКИ>=================================================================================================================
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	// position: relative;
+	&.loaded {
+	}
+}
+.page {
+	flex: 1 1 auto; 
+}
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+.container {
+	max-width: $mw + px;
+	margin: 0 auto;
+	width: 100%;
+	// @media (max-width: $md1+px) {
+	// 	// max-width: 970px;
+	// 	padding: 0 10px;
+	// }
+	// @media (max-width: $md2+px) {
+	// 	// max-width: 750px;
+	// }
+	// @media (max-width: $md3+px) {
+	// 	// max-width: none;
+	// 	// padding: 0 10px;
+	// }
+}
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+@import "forms.scss";
+@import "ui.scss";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>============================================================================================================
+//@import "../../js/fancybox/jquery.fancybox.scss";
+//@import "datepicker.scss";
+//@import "fontawesome.scss";
+//@import "popover.min.scss";
+//@import "baguetteBox.scss";
+// @import "fancybox.min.scss";
+// @import "pagging.scss";
+//@import "icons.scss";
+// @import "map.scss";
+// @import "slider.scss";
+// @import "collection.scss";
+// @import "popup.scss";
+@import "header.scss";
+@import "footer.scss";
+@import "home.scss";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+
+//<ОСНОВНОЙ БЛОК>=====================================================================================================================================
+
+//====================================================================================================================================================
+
+//</ОСНОВНОЙ БЛОК>====================================================================================================================================
+
+//<Адаптив>===========================================================================================================================================
+@media (max-width: 1100px) {
+	.container {
+		padding: 0 10px;
+	}
+}
+
+@media (max-width: 768px) {
+	.header {
+		position: fixed;
+		width: 100%;
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+	}
+	.icon-menu {
+		display: block;
+	}
+	.menu__body {
+		display: none;
+	}
+	.header__callback {
+    margin-right: 20px;
+	}
+}
+
+@media (max-width: 700px) {
+	.mob-menu {
+		width: 100%;
+		right: -100%;
+		-webkit-transition: right 0.8s;
+		-o-transition: right 0.8s;
+		transition: right 0.8s; }
+	}
+
+@media (max-width: 515px) {
+	.header__callback {
+    display: none; }
+	.mob-callback__phone {
+    display: flex; 
+		margin-right: 25px;
+	}
+}
