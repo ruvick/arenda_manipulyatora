@@ -866,10 +866,11 @@ body.ie .ibg img {
     -webkit-box-flex: 0;
     -ms-flex: 0 1 385px;
     flex: 0 1 385px;
-    max-height: 323px;
+    min-height: 323px;
     position: relative;
     background: #fff;
-    border-bottom: 1px solid #E8E8E8; }
+    border-bottom: 1px solid #E8E8E8;
+    overflow: hidden; }
     .prod-card__link img {
       max-width: 100%;
       -o-object-fit: cover;
