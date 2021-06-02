@@ -17,13 +17,16 @@
     width: 100%;
     justify-content: space-between; 
     align-items: center;
+    flex-wrap: wrap;
   }
 
   &__menu {
     flex: 0 1 558px;
     justify-content: space-between;
+    flex-wrap: wrap;
     li {
       a {
+        padding: 8px 6px 8px 0;
         color: #fff;
       }
     }
