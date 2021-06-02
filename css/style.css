@@ -1754,7 +1754,11 @@ body.ie .ibg img {
   .container {
     padding: 0 10px; }
   .header-bottom__form {
-    right: 1%; } }
+    right: 1%; }
+  .price-info__item {
+    margin-right: 10px; }
+  .price-info__item:last-child {
+    margin-right: 0; } }
 
 @media (max-width: 1330px) {
   .menu {
@@ -1780,7 +1784,13 @@ body.ie .ibg img {
   .prod-card__body {
     -webkit-box-flex: 0;
     -ms-flex: 0 1 33%;
-    flex: 0 1 33%; } }
+    flex: 0 1 33%; }
+  .advantages h2 {
+    margin-bottom: 15px; } }
+
+@media (max-width: 1100px) {
+  .price-info__item {
+    padding: 30px 20px; } }
 
 @media (max-width: 1024px) {
   .menu {
@@ -1796,7 +1806,14 @@ body.ie .ibg img {
   .prod-card__body:last-child {
     margin-bottom: 0; }
   .services__block-text {
-    padding: 30px 20px; } }
+    padding: 30px 20px; }
+  .advant__item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 24.6%;
+    flex: 0 1 24.6%;
+    padding: 15px; }
+  .advant__item:before {
+    margin-bottom: 10px; } }
 
 @media (max-width: 960px) {
   .header__container {
@@ -1810,6 +1827,12 @@ body.ie .ibg img {
     font-size: 18px; }
   .menu {
     margin: 0 15px; } }
+
+@media (max-width: 910px) {
+  .advant__item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 24%;
+    flex: 0 1 24%; } }
 
 @media (max-width: 860px) {
   .header__container {
@@ -1833,12 +1856,36 @@ body.ie .ibg img {
     -ms-flex: 0 0 180px;
     flex: 0 0 180px; }
   .header-bottom__form {
-    top: 110%; } }
+    top: 110%; }
+  .advant__item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 23.5%;
+    flex: 0 1 23.5%; }
+  .price-info__item {
+    padding: 30px 10px; } }
 
 @media (max-width: 812px) {
   .menu a {
     font-size: 14px;
-    padding: 8px 3px 8px 0; } }
+    padding: 8px 3px 8px 0; }
+  .advant__row {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+  .advant__item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 33%;
+    flex: 0 1 33%;
+    margin-bottom: 5px; }
+  .price-info__row {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+  .price-info__item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+    padding: 20px;
+    margin-right: 0;
+    margin-bottom: 10px; } }
 
 @media (max-width: 768px) {
   .header-top {
@@ -1876,7 +1923,14 @@ body.ie .ibg img {
     font-weight: 700;
     margin: 25px 0; }
   .services__block-text ul li p {
-    padding-left: 10px; } }
+    padding-left: 10px; }
+  .advant__item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 49%;
+    flex: 0 1 49%;
+    margin-bottom: 10px; }
+  .advant__row {
+    margin-bottom: 30px; } }
 
 @media (max-width: 700px) {
   .mob-menu {
@@ -1952,7 +2006,23 @@ body.ie .ibg img {
   .mob-menu .header__callback-btn {
     display: block; }
   .prod-card__link img {
-    height: auto; } }
+    height: auto; }
+  .advant__item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    /* align-items: center; */ }
+  .advant__item:last-child {
+    margin-bottom: 0; }
+  .advant__item:before {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 80px;
+    flex: 0 0 80px;
+    margin-bottom: 0; } }
 
 @media (max-width: 480px) {
   .header__callback {
@@ -1965,11 +2035,33 @@ body.ie .ibg img {
   .sending-form h2 {
     margin-bottom: 20px; }
   .form__btn {
-    width: 100%; } }
+    width: 100%; }
+  .price-info__item h3 {
+    margin-bottom: 10px; }
+  .price-info__cell {
+    font-size: 20px;
+    margin-bottom: 10px; }
+  .advant__row {
+    margin-bottom: 30px; }
+  .price-info__item {
+    padding: 30px 20px; }
+  .price-info__line {
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 3px; } }
 
 @media (max-width: 414px) {
   .header-bottom__form {
-    padding: 25px 15px; } }
+    padding: 25px 15px; }
+  .price-info__item {
+    padding: 20px 13px; }
+  .price-info__item h3 {
+    font-size: 30px; }
+  .price-info__cell {
+    font-size: 16px;
+    line-height: 1;
+    min-height: 0;
+    margin-bottom: 8px; } }
 
 @media (max-width: 360px) {
   .header-bottom h1 {
