@@ -1,27 +1,37 @@
 .header {
-	padding-bottom: 208px;
+	// padding-bottom: 208px;
 	position: relative;
 	z-index: 50000;
 }
 
+.header .container {
+	position: relative;
+}
+
 .header-top {
-	border-bottom: 1px solid #EBE6D3;
+	border-bottom: 4px solid #EBE6D3;
 }
 .header__container {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	max-width: 1600px;
-	height: 113px;
+	min-height: 113px;
 	margin-right: 80px;
+	padding: 10px 0;
 }
 
 .header-bottom {
 	padding: 70px 0 109px 0;
-	position: relative;
+	// position: relative;
+	height: 760px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+	background-image: url('../img/header-img.jpg');
 }
 .header-bottom h1 {
-	margin-bottom: 15px;
+	margin-bottom: 33px;
 }
 .header-bottom p {
 	font-size: 36px;
@@ -29,20 +39,27 @@
 	line-height: 38 / 36 * 100%;
 }
 .header-bottom__form-block {
-	position: absolute;
-	top: -19%;
-	right: 15.5%;
-	max-width: 1100px;
-	width: 100%;
-	display: flex;
-	align-items: center;
+	// position: absolute;
+	// top: -19%;
+	// right: 21.8%;
+	// max-width: 979px;
+	// width: 100%;
+	// height: 805px;
+	// img {
+	// 	max-width: 100%;
+  //   height: 100%;
+  //   object-fit: cover;
+	// }
 }
 .header-bottom__form {
-	margin-left: -280px;
-	margin-top: 155px;
+	position: absolute;
+	top: 85%;
+	right: 0;
+	margin-left: auto;
 }
 .sending-form {
-	flex: 0 0 458px;
+	max-width: 458px;
+	width: 100%;
 	padding: 43px 22px 37px 34px;
 	background: #FFC200;
 	border-radius: 25px;
@@ -104,7 +121,7 @@
 }
 .logo-icon:before { 
 	content: '';
-	position: absolute;
+	position: absolute; 
 	top: 0;
 	left: 0;
 	width: 60px;
@@ -119,18 +136,18 @@
 	display: flex;
   justify-content: space-between;
 	align-items: center;
-	max-width: 1050px;
+	max-width: 1130px;
 	width: 100%;
 }
 
 .menu {
 	max-width: 600px;
 	width: 100%;
-	height: 23px;
+	// height: 23px;
 	&__body {}
 	// .menu__list
 	&__list {
-		// justify-content: space-between;
+		justify-content: space-between;
 		flex-wrap: wrap;
 	}
 	// .menu__link
@@ -139,7 +156,8 @@
 		display: block;
 		font-size: 16px;
 		font-weight: 400;
-		padding: 0px 48px 8px 0;
+		// padding: 8px 48px 8px 0;
+		padding: 8px 6px 8px 0;
 	}
 }
 
@@ -168,9 +186,10 @@
 	color: #fff;
 	margin-bottom: 15px;
 }
-.header h1 {
-	margin-bottom: 33px;
-}
+// .header h1 {
+// 	margin-bottom: 33px;
+// 	margin-bottom: 15px;
+// }
 .header__title-paragraph {
 	line-height: 24px;
 	color: #fff;
