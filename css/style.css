@@ -1457,7 +1457,7 @@ body.ie .ibg img {
   width: 50%;
   height: 100%;
   padding: 35px 10px 0px 20px;
-  margin-top: 85px;
+  margin-top: 73px;
   overflow: auto;
   right: -100%;
   -webkit-transition: right 0.8s;
@@ -1816,12 +1816,19 @@ body.ie .ibg img {
     z-index: 50000000;
     width: 100%;
     background: #fff; }
+  .header__container {
+    min-height: 50px;
+    padding: 5px 10px; }
   .icon-menu {
     display: block; }
   .menu__body {
     display: none; }
   .header__callback {
-    margin-right: 15px; } }
+    margin-right: 15px; }
+  .header__callback-btn {
+    width: 173px;
+    height: 27px;
+    font-size: 14px !important; } }
 
 @media (max-width: 700px) {
   .mob-menu {
@@ -1832,6 +1839,26 @@ body.ie .ibg img {
     transition: right 0.8s; } }
 
 @media (max-width: 515px) {
+  .header__container {
+    min-height: 50px;
+    padding: 3px 10px 0px 10px; }
+  .logo-icon {
+    max-width: 170px;
+    height: 46px;
+    padding-left: 48px; }
+  .logo-icon:before {
+    height: 43px;
+    background-size: 68%; }
+  .logo-icon P {
+    font-size: 14px; }
+  .header__callback a {
+    margin-top: 3px; }
+  .header__callback-btn {
+    display: none; }
+  .mob-menu {
+    margin-top: 53px; } }
+
+@media (max-width: 480px) {
   .header__callback {
     display: none; }
   .mob-callback__phone {
