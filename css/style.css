@@ -2113,7 +2113,9 @@ body.ie .ibg img {
   .connection__form {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 50%;
-    flex: 0 0 50%; } }
+    flex: 0 0 50%; }
+  .connection__form-block {
+    right: -53%; } }
 
 @media (max-width: 700px) {
   .mob-menu {
