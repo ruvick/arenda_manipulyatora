@@ -38,18 +38,54 @@ $('.mob-menu li a').on('click', function () {
 });
 
 // // Плавный скролл якорных ссылок
-$(".menu__list, .mob-menu__list").on("click", "a", function (event) {
+$(".menu__list, .mob-menu__list, .footer__menu").on("click", "a", function (event) {
 	event.preventDefault();
 	var id = $(this).attr('href'),
 		top = $(id).offset().top;
-	$('body,html').animate({ scrollTop: top }, 1500);
+	$('body,html').animate({ scrollTop: top }, 1000);
 });
 
 
-// Маска телефона
-var inputmask_phone = { "mask": "+9(999)999-99-99" };
-jQuery("input[type=tel]").inputmask(inputmask_phone);
+// Маска телефона на JS
+function setCursorPosition(pos, elem) {
+	elem.focus();
+	if (elem.setSelectionRange) elem.setSelectionRange(pos, pos);
+	else if (elem.createTextRange) {
+		var range = elem.createTextRange();
+		range.collapse(true);
+		range.moveEnd("character", pos);
+		range.moveStart("character", pos);
+		range.select()
+	}
+}
+function mask(event) {
+	var matrix = "+7 (___) ___ ____",
+		i = 0,
+		def = matrix.replace(/\D/g, ""),
+		val = this.value.replace(/\D/g, "");
+	if (def.length >= val.length) val = def;
+	this.value = matrix.replace(/./g, function (a) {
+		return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a
+	});
+	if (event.type == "blur") {
+		if (this.value.length == 2) this.value = ""
+	} else setCursorPosition(this.value.length, this)
+};
+var input = document.querySelector("#tel");
+input.addEventListener("input", mask, false);
+input.addEventListener("focus", mask, false);
+input.addEventListener("hover", mask, false);
+input.addEventListener("blur", mask, false);
 
+var inputTel = document.querySelector("#tel2");
+inputTel.addEventListener("input", mask, false);
+inputTel.addEventListener("focus", mask, false);
+inputTel.addEventListener("blur", mask, false);
+
+var inputTelpopup = document.querySelector("#tel3");
+inputTelpopup.addEventListener("input", mask, false);
+inputTelpopup.addEventListener("focus", mask, false);
+inputTelpopup.addEventListener("blur", mask, false);
 
 
 //Валидация телефона + Отправщик
@@ -135,7 +171,8 @@ function body_lock_add(delay) {
 	}
 }
 //=================
-// Popup 3 JS
+
+// Popup JS
 let unlock = true;
 let popup_link = document.querySelectorAll('._popup-link');
 let popups = document.querySelectorAll('.popup');
@@ -216,132 +253,9 @@ document.addEventListener('keydown', function (e) {
 });
 
 
-
-//POPUP
-// $('.pl').click(function (event) {
-// 	var pl = $(this).attr('href').replace('#', '');
-// 	var v = $(this).data('vid');
-// 	popupOpen(pl, v);
-// 	return false;
-// });
-// function popupOpen(pl, v) {
-// 	$('.popup').removeClass('active').hide();
-// 	if (!$('.menu__body').hasClass('active')) {
-// 		//$('body').data('scroll',$(window).scrollTop());
-// 	}
-// 	if (!isMobile.any()) {
-// 		$('body').css({ paddingRight: $(window).outerWidth() - $('.wrapper').outerWidth() }).addClass('lock');
-// 		$('.pdb').css({ paddingRight: $(window).outerWidth() - $('.wrapper').outerWidth() });
-// 	} else {
-// 		setTimeout(function () {
-// 			$('body').addClass('lock');
-// 		}, 300);
-// 	}
-// 	history.pushState('', '', '#' + pl);
-// 	if (v != '' && v != null) {
-// 		$('.popup-' + pl + ' .popup-video__value').html('<iframe src="https://www.youtube.com/embed/' + v + '?autoplay=1"  allow="autoplay; encrypted-media" allowfullscreen></iframe>');
-// 	}
-// 	$('.popup-' + pl).fadeIn(300).delay(300).addClass('active');
-
-// 	if ($('.popup-' + pl).find('.slick-slider').length > 0) {
-// 		$('.popup-' + pl).find('.slick-slider').slick('setPosition');
-// 	}
-// }
-// function openPopupById(popup_id) {
-// 	$('#' + popup_id).fadeIn(300).delay(300).addClass('active');
-// }
-// function popupClose() {
-// 	$('.popup').removeClass('active').fadeOut(300);
-// 	if (!$('.menu__body').hasClass('active')) {
-// 		if (!isMobile.any()) {
-// 			setTimeout(function () {
-// 				$('body').css({ paddingRight: 0 });
-// 				$('.pdb').css({ paddingRight: 0 });
-// 			}, 200);
-// 			setTimeout(function () {
-// 				$('body').removeClass('lock');
-// 				//$('body,html').scrollTop(parseInt($('body').data('scroll')));
-// 			}, 200);
-// 		} else {
-// 			$('body').removeClass('lock');
-// 			//$('body,html').scrollTop(parseInt($('body').data('scroll')));
-// 		}
-// 	}
-// 	$('.popup-video__value').html('');
-
-// 	history.pushState('', '', window.location.href.split('#')[0]);
-// }
-// $('.popup-close,.popup__close').click(function (event) {
-// 	popupClose();
-// 	return false;
-// });
-// $('.popup').click(function (e) {
-// 	if (!$(e.target).is(".popup>.popup-table>.cell *") || $(e.target).is(".popup-close") || $(e.target).is(".popup__close")) {
-// 		popupClose();
-// 		return false;
-// 	}
-// });
-// $(document).on('keydown', function (e) {
-// 	if (e.which == 27) {
-// 		popupClose();
-// 	}
-// });
-
-// $('.goto').click(function () {
-// 	var el = $(this).attr('href').replace('#', '');
-// 	var offset = 0;
-// 	$('body,html').animate({ scrollTop: $('.' + el).offset().top + offset }, 500, function () { });
-
-// 	if ($('.menu__body').hasClass('active')) {
-// 		$('.menu__body,.icon-menu').removeClass('active');
-// 		$('body').removeClass('lock');
-// 	}
-// 	return false;
-// });
-
-
-// function ibg() {
-// 	if (isIE()) {
-// 		let ibg = document.querySelectorAll(".ibg");
-// 		for (var i = 0; i < ibg.length; i++) {
-// 			if (ibg[i].querySelector('img') && ibg[i].querySelector('img').getAttribute('src') != null) {
-// 				ibg[i].style.backgroundImage = 'url(' + ibg[i].querySelector('img').getAttribute('src') + ')';
-// 			}
-// 		}
-// 	}
-// }
-// ibg();
-
-
 //Клик вне области
 $(document).on('click touchstart', function (e) {
 	if (!$(e.target).is(".select *")) {
 		$('.select').removeClass('active');
 	};
 });
-
-
-if ($('.t,.tip').length > 0) {
-	tip();
-}
-function tip() {
-	$('.t,.tip').webuiPopover({
-		placement: 'top',
-		trigger: 'hover',
-		backdrop: false,
-		//selector:true,
-		animation: 'fade',
-		dismissible: true,
-		padding: false,
-		//hideEmpty: true
-		onShow: function ($element) { },
-		onHide: function ($element) { },
-	}).on('show.webui.popover hide.webui.popover', function (e) {
-		$(this).toggleClass('active');
-	});
-}
-
-//scrollToFixed Фиксовая шапка
-  // $(".header").scrollToFixed({
-  //   marginTop: -1
-  // });
