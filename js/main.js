@@ -792,11 +792,12 @@ jQuery("input[type=tel]").inputmask(inputmask_phone);
 
 
 //Валидация телефона + Отправщик
-jQuery('.header__form button').click(function (e) {
+jQuery('.form button').click(function (e) {
 	e.preventDefault();
 
-	let persPhone = jQuery('.header__form input[name=tel]').val();
+	let persPhone = jQuery('.form input[name=tel]').val();
 	if ((persPhone == "") || (persPhone.indexOf("_") > 0)) {
+		$(this).siblings('input[name=name]').css("background-color", "#ff91a4")
 		$(this).siblings('input[name=tel]').css("background-color", "#ff91a4")
 		return;
 	}
@@ -804,9 +805,9 @@ jQuery('.header__form button').click(function (e) {
 	var jqXHR = jQuery.post(
 		"../sender/send.php",
 		{
-			phone: jQuery('.header__form input[name=tel]').val(),
-			name: jQuery('.header__form input[name=name]').val(),
-			mail: jQuery('.header__form textarea[name=text]').val(),
+			name: jQuery('.form input[name=name]').val(),
+			phone: jQuery('.form input[name=tel]').val(),
+			mail: jQuery('.form textarea[name=text]').val(),
 		}
 
 	);
@@ -815,9 +816,9 @@ jQuery('.header__form button').click(function (e) {
 	jqXHR.done(function (responce) {
 		console.log(responce);
 		document.location.href = "../thank-you.html";
-		jQuery('.header__form input[name=tel]').val("");
-		jQuery('.header__form input[name=name]').val("");
-		jQuery('.header__form textarea[name=text]').val("");
+		jQuery('.form input[name=name]').val("");
+		jQuery('.form input[name=tel]').val("");
+		jQuery('.form textarea[name=text]').val("");
 	});
 
 	jqXHR.fail(function (responce) {
