@@ -95,7 +95,6 @@ function mask(event) {
 var input = document.querySelector("#tel");
 input.addEventListener("input", mask, false);
 input.addEventListener("focus", mask, false);
-input.addEventListener("hover", mask, false);
 input.addEventListener("blur", mask, false);
 
 var inputTel = document.querySelector("#tel2");
