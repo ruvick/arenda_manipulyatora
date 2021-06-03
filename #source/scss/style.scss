@@ -85,6 +85,7 @@ body {
 h1 {
 	font-size: 40px;
 	line-height: 44 / 40 * 100%;
+	font-weight: 900;
 	color: #0070bf;}
 h2 {
 	font-size: 40px;
@@ -219,7 +220,7 @@ h4 {
     overflow: hidden;
 		img {
 			max-width: 100%;
-			height: 100%;
+			// height: 100%;
 			object-fit: cover;
 		}
 	}
@@ -295,6 +296,10 @@ h4 {
 .connection {
 	padding: 100px 0 156px 0;
 	position: relative;
+	// background-repeat: no-repeat;
+	// background-size: cover;
+	// background-position: center;
+	// background-image: url('../img/form-bg.jpg');
 }
 .connection .container {
 	position: relative;
@@ -360,6 +365,7 @@ h4 {
 
 .connection__mail {
 	font-size: 22px;
+	font-weight: 900;
 }
 
 .connection__form-block { 
@@ -381,7 +387,8 @@ h4 {
 }
 .connection__form {
 	position: absolute;
-	top: 35%;
+	// top: 35%;
+	top: 5%;
 	right: 0;
 }
 //====================================================================================================================================================
@@ -445,9 +452,6 @@ h4 {
 	.connection__form-block {
 		right: -10%;
 	}
-	.connection__form {
-    right: 12%;
-	}
 }
 
 @media (max-width: 1100px) {
@@ -466,9 +470,6 @@ h4 {
     flex: 0 1 49%;
     margin-bottom: 15px;
 	}
-	.prod-card__body:last-child {
-    margin-bottom: 0;
-	}
 	.services__block-text {
     padding: 30px 20px;
 	}
@@ -481,9 +482,6 @@ h4 {
 	}
 	.connection__form-block {
 		right: -30%;
-	}
-	.connection__form {
-    right: 31%;
 	}
 }
 
@@ -501,16 +499,17 @@ h4 {
 	}
 	.menu {
     margin: 0 15px; }
-	.connection__block {
-		width: 100%;
-		height: 100%;
-		border-radius: 0;
-	}
+	// .connection__block {
+	// 	width: 100%;
+	// 	height: 100%;
+	// 	border-radius: 0;
+	// }
 	.connection__form-block {
     bottom: -43%;
     z-index: -1;
 	}
 	.connection__form {
+		top: 15%;
     z-index: 5000;
 	}
 }
@@ -550,6 +549,12 @@ h4 {
 	}
 	.price-info__item {
     padding: 30px 10px;
+	}
+	.connection__form-block {
+    width: auto;
+	}
+	.connection__form {
+    top: 25%;
 	}
 }
 
@@ -620,7 +625,7 @@ h4 {
     padding: 20px;
 	}
 	.prod-card__body {
-    flex: 0 1 49.8%;
+    flex: 0 1 49%;
 	}
 	.prod-card__price {
     font-weight: 700;
@@ -639,6 +644,37 @@ h4 {
 	.footer__container {
     padding: 20px 10px !important;
 	}
+	.connection {
+    padding: 30px 0 156px 0;
+	}
+	.connection__block {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+	}
+	.connection h2 br {
+		display: none;
+	}
+	.connection h2 {
+		line-height: 1;
+    margin-bottom: 25px;
+	}
+	.connection__line {
+    margin-bottom: 20px;
+	}
+	.connection__social-block {
+    margin-bottom: 15px;
+	}
+	.connection__form {
+    position: sticky;
+	}
+	.connection__mail {
+    display: block;
+		margin-bottom: 30px;
+	}
+	.connection__form {
+    flex: 0 0 50%; }
 }
 
 @media (max-width: 700px) {
@@ -667,6 +703,26 @@ h4 {
 	}
 	.prod-card {
     margin-bottom: 30px;
+	}
+}
+
+@media (max-width: 560px) {
+	.connection {
+    padding: 45px 0 220px 0;
+	}
+	.connection__block-info {
+		flex-wrap: wrap;
+	}
+	.connection__form {
+    flex: 0 1 100%;
+    max-width: 100%;
+	}
+	.connection__form-block {
+		bottom: -65%;
+    right: 0;
+	}
+	.connection__form-block img {
+    object-fit: contain;
 	}
 }
 
@@ -798,6 +854,12 @@ h4 {
 	.popup__body .sending-form h2 {
     margin-bottom: 35px;
 	}
+	.connection {
+    padding: 45px 0 235px 0;
+	}
+	.connection__form {
+		padding: 30px 20px;
+	}
 }
 
 @media (max-width: 414px) {
@@ -825,5 +887,11 @@ h4 {
 	}
 	.services__block-text h2 {
     margin-left: 0;
+	}
+	.connection {
+    padding: 45px 0 210px 0;
+	}
+	.connection__form-block {
+    bottom: -60%;
 	}
 }
