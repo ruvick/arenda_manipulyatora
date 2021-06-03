@@ -2130,7 +2130,7 @@ body.ie .ibg img {
 
 @media (max-width: 560px) {
   .connection {
-    padding: 45px 0 220px 0; }
+    padding: 45px 0 300px 0; }
   .connection__block-info {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
@@ -2140,7 +2140,7 @@ body.ie .ibg img {
     flex: 0 1 100%;
     max-width: 100%; }
   .connection__form-block {
-    bottom: -65%;
+    bottom: -75%;
     right: 0; }
   .connection__form-block img {
     -o-object-fit: contain;
@@ -2266,8 +2266,8 @@ body.ie .ibg img {
     width: 100%; }
   .popup__body .sending-form h2 {
     margin-bottom: 35px; }
-  .connection {
-    padding: 45px 0 235px 0; }
+  .connection__form-block {
+    bottom: -72%; }
   .connection__form {
     padding: 30px 20px; } }
 
@@ -2283,6 +2283,12 @@ body.ie .ibg img {
     line-height: 1;
     min-height: 0;
     margin-bottom: 8px; } }
+
+@media (max-width: 380px) {
+  .connection {
+    padding: 45px 0 230px 0; }
+  .connection__form-block {
+    bottom: -63%; } }
 
 @media (max-width: 360px) {
   .header-bottom h1 {

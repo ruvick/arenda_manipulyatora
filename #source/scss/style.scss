@@ -708,7 +708,7 @@ h4 {
 
 @media (max-width: 560px) {
 	.connection {
-    padding: 45px 0 220px 0;
+		padding: 45px 0 300px 0;
 	}
 	.connection__block-info {
 		flex-wrap: wrap;
@@ -718,7 +718,7 @@ h4 {
     max-width: 100%;
 	}
 	.connection__form-block {
-		bottom: -65%;
+		bottom: -75%;
     right: 0;
 	}
 	.connection__form-block img {
@@ -870,8 +870,11 @@ h4 {
 	.popup__body .sending-form h2 {
     margin-bottom: 35px;
 	}
-	.connection {
-    padding: 45px 0 235px 0;
+	// .connection {
+  //   padding: 45px 0 235px 0;
+	// }
+	.connection__form-block {
+    bottom: -72%;
 	}
 	.connection__form {
 		padding: 30px 20px;
@@ -893,6 +896,15 @@ h4 {
     line-height: 1;
 		min-height: 0;
     margin-bottom: 8px;
+	}
+}
+
+@media (max-width: 380px) {
+	.connection {
+		padding: 45px 0 230px 0;
+	}
+	.connection__form-block {
+    bottom: -63%;
 	}
 }
 
