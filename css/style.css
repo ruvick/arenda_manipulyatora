@@ -2209,7 +2209,19 @@ body.ie .ibg img {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 80px;
     flex: 0 0 80px;
-    margin-bottom: 0; } }
+    margin-bottom: 0; }
+  .nuar_blk {
+    display: block;
+    background-color: #00000065; }
+  .header-bottom h1,
+  .header-bottom p {
+    position: relative;
+    z-index: 500;
+    color: #fff; }
+  .header-bottom__form {
+    z-index: 500; }
+  .form p {
+    color: #161615; } }
 
 @media (max-width: 480px) {
   .header__callback {
