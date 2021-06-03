@@ -2,8 +2,8 @@
 header("Access-Control-Allow-Origin: *"); 
 
 if((isset($_POST['phone'])&&$_POST['phone']!="")){
-        $to = 'rudikov-web@ya.ru'; 
-        $subject = 'Обращение с сайта https://ur-center46.ru'; 
+        $to = 'rudikov-web@ya.ru,asmi046@gmail.com,79067076385@yandex.ru'; 
+        $subject = 'Обращение с сайта манипулятор-мск.рф'; 
         $message = '
                 <html>
                     <head>
@@ -12,11 +12,11 @@ if((isset($_POST['phone'])&&$_POST['phone']!="")){
                     <body>
                         <p>Имя: '.$_POST['name'].'</p>
                         <p>Телефон: '.$_POST['phone'].'</p> 
-                        <p>Вопрос: '.$_POST['mail'].'</p>                   
+                        <p>Время подачи: '.$_POST['time'].'</p>                   
                     </body>
                 </html>'; 
         $headers  = "Content-type: text/html; charset=utf-8 \r\n"; 
-        $headers .= "From: Заявка с сайта Аренда манипулятора <79067076385@yandex.ru>\r\n";
+        $headers .= "From: Заявка с сайта Аренда манипулятора <noreply@манипулятор-мск.рф>\r\n";
         if (mail($to, $subject, $message, $headers)) {
             http_response_code(200);
             die();

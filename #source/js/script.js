@@ -99,11 +99,11 @@ jQuery('.form button').click(function (e) {
 	}
 
 	var jqXHR = jQuery.post(
-		"../sender/send.php",
+		"sender/send.php",
 		{
 			name: jQuery('.form input[name=name]').val(),
 			phone: jQuery('.form input[name=tel]').val(),
-			mail: jQuery('.form textarea[name=text]').val(),
+			time: jQuery('.form input[name=time]').val(),
 		}
 
 	);
