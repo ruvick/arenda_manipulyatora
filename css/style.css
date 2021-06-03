@@ -1376,7 +1376,7 @@ body.ie .ibg img {
   line-height: 100%;
   margin-bottom: 31px; }
 
-.sending-form p {
+.sending-form a {
   font-size: 12px;
   line-height: 120%; }
 
@@ -1861,6 +1861,21 @@ body.ie .ibg img {
   position: absolute;
   top: 5%;
   right: 0; }
+
+.privacy {
+  padding: 35px 0;
+  background: #D2D1D1; }
+
+.privacy h1 {
+  color: #161615;
+  margin-bottom: 35px; }
+
+.privacy h2 {
+  margin-top: 55px;
+  margin-bottom: 20px; }
+
+.privacy p {
+  margin-bottom: 30px; }
 
 @media (max-width: 1700px) {
   .header__container {
