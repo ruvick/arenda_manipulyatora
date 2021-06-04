@@ -1324,7 +1324,9 @@ body.ie .ibg img {
   position: relative; }
 
 .header-top {
-  border-bottom: 4px solid #EBE6D3; }
+  position: relative;
+  -webkit-box-shadow: 0px 4px 3px 0px #ebe6d3;
+  box-shadow: 0px 4px 3px 0px #ebe6d3; }
 
 .header__container {
   display: -webkit-box;

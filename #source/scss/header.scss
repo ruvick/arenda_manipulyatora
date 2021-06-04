@@ -9,7 +9,9 @@
 }
 
 .header-top {
-	border-bottom: 4px solid #EBE6D3;
+	position: relative;
+	// border-bottom: 4px solid #EBE6D3;
+	box-shadow: 0px 4px 3px 0px #ebe6d3;
 }
 .header__container {
 	display: flex;
