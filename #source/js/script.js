@@ -86,24 +86,35 @@ inputTelpopup.addEventListener("input", mask, false);
 inputTelpopup.addEventListener("focus", mask, false);
 inputTelpopup.addEventListener("blur", mask, false);
 
+var inputTelpopup = document.querySelector("#tel4");
+inputTelpopup.addEventListener("input", mask, false);
+inputTelpopup.addEventListener("focus", mask, false);
+inputTelpopup.addEventListener("blur", mask, false);
+
 
 //Валидация телефона + Отправщик
-jQuery('.form button').click(function (e) {
+jQuery(".form__btn").click(function (e) {
 	e.preventDefault();
 
-	let persPhone = jQuery('.form input[name=tel]').val();
+	let formmsg = jQuery(this).data("formmsg");
+	let name = $(this).siblings('input[name=name]').val();
+	let persPhone = $(this).siblings('input[name=tel]').val();
+	let time = $(this).siblings('input[name=time]').val();
 	if ((persPhone == "") || (persPhone.indexOf("_") > 0)) {
 		$(this).siblings('input[name=name]').css("background-color", "#ff91a4")
 		$(this).siblings('input[name=tel]').css("background-color", "#ff91a4")
 		return;
 	}
+	console.log('persPhone: ', persPhone);
+	console.log('formmsg: ', formmsg);
 
 	var jqXHR = jQuery.post(
 		"sender/send.php",
 		{
-			name: jQuery('.form input[name=name]').val(),
-			phone: jQuery('.form input[name=tel]').val(),
-			time: jQuery('.form input[name=time]').val(),
+			formmsg: formmsg,
+			name: name,
+			phone: persPhone,
+			time: time,
 		}
 
 	);
@@ -112,9 +123,9 @@ jQuery('.form button').click(function (e) {
 	jqXHR.done(function (responce) {
 		console.log(responce);
 		document.location.href = "../thank-you.html";
-		jQuery('.form input[name=name]').val("");
-		jQuery('.form input[name=tel]').val("");
-		jQuery('.form textarea[name=text]').val("");
+		jQuery('input[name=name]').val("");
+		jQuery('input[name=tel]').val("");
+		jQuery('textarea[name=text]').val("");
 	});
 
 	jqXHR.fail(function (responce) {

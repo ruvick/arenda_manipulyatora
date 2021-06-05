@@ -411,6 +411,16 @@ h4 {
 .privacy p  {
 	margin-bottom: 30px;
 }
+//====================================================================================================================================================
+
+.header-bottom__img-bg {
+	display: none;
+	max-width: 515px;
+	width: 100%;
+}
+.header-bottom__img-bg img {
+	max-width: 100%;
+}
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================================================
 
@@ -781,6 +791,7 @@ h4 {
 @media (max-width: 515px) {
 	.header-bottom {
     padding: 80px 0 50px 0;
+		background-image: none;
 	}
 	.header__container {
     min-height: 50px;
@@ -825,21 +836,30 @@ h4 {
     flex: 0 0 80px;
 		margin-bottom: 0;
 	}
-	.nuar_blk {
-    display: block;
-    background-color: #00000065;
+	// .nuar_blk {
+  //   display: block;
+  //   background-color: #00000065;
+	// }
+	.header-bottom h1 {
+    margin-bottom: 20px;
 	}
-	.header-bottom h1,
-	.header-bottom p  {
-    position: relative;
-    z-index: 500;
-		color: #fff;
+	.header-bottom p {
+    color: #000;
+    font-size: 25px;
+    margin-bottom: 0px;
+	}
+	.header-bottom__form p {
+    font-size: 12px;
 	}
 	.header-bottom__form {
     z-index: 500;
 	}
 	.form p {
 		color: #161615;;
+	}
+	.header-bottom__img-bg {
+    display: block;
+    margin-bottom: 10px;
 	}
 }
 
