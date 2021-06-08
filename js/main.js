@@ -37,6 +37,52 @@ if (isMobile.iOS()) {
 	var act = "touchstart";
 }
 
+//BodyLock
+function body_lock(delay) {
+	let body = document.querySelector("body");
+	if (body.classList.contains('lock')) {
+		body_lock_remove(delay);
+	} else {
+		body_lock_add(delay);
+	}
+}
+function body_lock_remove(delay) {
+	let body = document.querySelector("body");
+	if (unlock) {
+		let lock_padding = document.querySelectorAll("._lp");
+		setTimeout(() => {
+			for (let index = 0; index < lock_padding.length; index++) {
+				const el = lock_padding[index];
+				el.style.paddingRight = '0px';
+			}
+			body.style.paddingRight = '0px';
+			body.classList.remove("lock");
+		}, delay);
+
+		unlock = false;
+		setTimeout(function () {
+			unlock = true;
+		}, delay);
+	}
+}
+function body_lock_add(delay) {
+	let body = document.querySelector("body");
+	if (unlock) {
+		let lock_padding = document.querySelectorAll("._lp");
+		for (let index = 0; index < lock_padding.length; index++) {
+			const el = lock_padding[index];
+			el.style.paddingRight = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
+		}
+		body.style.paddingRight = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
+		body.classList.add("lock");
+
+		unlock = false;
+		setTimeout(function () {
+			unlock = true;
+		}, delay);
+	}
+}
+
 
 //BURGER
 let iconMenu = document.querySelector(".icon-menu");
@@ -51,7 +97,7 @@ if (iconMenu) {
 }
 window.addEventListener('click', e => { // при клике в любом месте окна браузера
 	const target = e.target // находим элемент, на котором был клик
-	if (!target.closest('.icon-menu') && !target.closest('.mob-menu') && !target.closest('._popup-link')) { // если этот элемент или его родительские элементы не окно навигации и не кнопка
+	if (!target.closest('.icon-menu') && !target.closest('.mob-menu') && !target.closest('._popup-link') && !target.closest('.popup')) { // если этот элемент или его родительские элементы не окно навигации и не кнопка
 		iconMenu.classList.remove('active') // то закрываем окно навигации, удаляя активный класс
 		menuBody.classList.remove('active')
 		body.classList.remove('lock')
@@ -163,52 +209,6 @@ jQuery(".form__btn").click(function (e) {
 
 });
 
-//BodyLock
-function body_lock(delay) {
-	let body = document.querySelector("body");
-	if (body.classList.contains('lock')) {
-		body_lock_remove(delay);
-	} else {
-		body_lock_add(delay);
-	}
-}
-function body_lock_remove(delay) {
-	let body = document.querySelector("body");
-	if (unlock) {
-		let lock_padding = document.querySelectorAll("._lp");
-		setTimeout(() => {
-			for (let index = 0; index < lock_padding.length; index++) {
-				const el = lock_padding[index];
-				el.style.paddingRight = '0px';
-			}
-			body.style.paddingRight = '0px';
-			body.classList.remove("lock");
-		}, delay);
-
-		unlock = false;
-		setTimeout(function () {
-			unlock = true;
-		}, delay);
-	}
-}
-function body_lock_add(delay) {
-	let body = document.querySelector("body");
-	if (unlock) {
-		let lock_padding = document.querySelectorAll("._lp");
-		for (let index = 0; index < lock_padding.length; index++) {
-			const el = lock_padding[index];
-			el.style.paddingRight = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
-		}
-		body.style.paddingRight = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
-		body.classList.add("lock");
-
-		unlock = false;
-		setTimeout(function () {
-			unlock = true;
-		}, delay);
-	}
-}
-//=================
 
 // Popup JS
 let unlock = true;
