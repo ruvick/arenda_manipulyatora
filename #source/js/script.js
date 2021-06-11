@@ -64,9 +64,10 @@ function body_lock_add(delay) {
 
 
 //BURGER
-let iconMenu = document.querySelector(".icon-menu");
-let body = document.querySelector("body");
-let menuBody = document.querySelector(".mob-menu");
+const iconMenu = document.querySelector(".icon-menu");
+const body = document.querySelector("body");
+const menuBody = document.querySelector(".mob-menu");
+const menuListItemElems = document.querySelector(".mob-menu__list");
 if (iconMenu) {
 	iconMenu.addEventListener("click", function () {
 		iconMenu.classList.toggle("active");
@@ -83,12 +84,14 @@ window.addEventListener('click', e => { // при клике в любом ме�
 	}
 })
 
-// // Закрытие моб меню при клике на якорную ссылку
-$('.mob-menu li a').on('click', function () {
-	if ($('.icon-menu').css('display') != 'none') {
-		$(".icon-menu").trigger("click");
-	}
-});
+// // Закрытие моб меню при клике на якорную ссылку 
+if (menuListItemElems) {
+	menuListItemElems.addEventListener("click", function () {
+		iconMenu.classList.toggle("active");
+		body.classList.toggle("lock");
+		menuBody.classList.toggle("active");
+	});
+}
 
 // // Плавный скролл якорных ссылок
 $(".menu__list, .mob-menu__list, .footer__menu").on("click", "a", function (event) {
